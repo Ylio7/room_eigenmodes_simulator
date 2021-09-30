@@ -19,7 +19,7 @@ Por otra parte, si no se tiene instalado COMSOL Multiphysics®, se podrá utiliz
 La aplicación inicia con el modelo geométrico por defecto junto con la tabla de sus frecuencias propias.
 ![](https://raw.githubusercontent.com/Ylio7/simulador-de-modos-propios/master/doc/img/001.png)
 ### Importar modelo
-Permite importar modelos geométricos en formato .stl, .dwg, .dxf y otros de CAD 3D.
+Permite importar modelos geométricos en formato .stl, .dwg, .dxf y otros de CAD 3D. Se recomienda que los modelos realizados en SketchUp sean exportados a formato .stl.
 ### SketchUp Online
 Abre el sitio web https://app.sketchup.com/app que permite realizar modelos de salas de forma gratuita con las herramientas del software SketchUp, para ser luego importadas a la aplicación.
 ### Graficar geometría
@@ -95,7 +95,9 @@ Finalmente, procedemos a realizar el estudio de distribución de modos y el aná
 
 Según se aprecia, el estudio alcanza hasta la banda de tercio de octava de 100 Hz, debido al corte por la frecuencia de Schroeder. En este ejemplo, la distribución de modos cumple con el criterio de Bonello.
 ## SketchUp Online
-Permite diseñar y modelar salas de manera gratuita utilizando las herramientas del programa SketchUp. Al hacer clic se abrirá la pagina de inicio de sesión. Se podrá crear una cuenta de Trimble o conectarse con una cuenta de Google o Apple.
+Es recomendable realizar los modelos utilizando el programa de dibujo SketchUp, fundamentalmente por su sencillez y rapidez. El mismo permite exportar los modelos al formato .stl para ser luego importados a la aplicación.
+
+En caso de no contar con este programa, existe una versión online que permite diseñar y modelar salas de manera gratuita. Al hacer clic se abrirá la pagina de inicio de sesión. Se podrá crear una cuenta de Trimble o conectarse con una cuenta de Google o Apple.
 
 ![](https://raw.githubusercontent.com/Ylio7/simulador-de-modos-propios/master/doc/img/009.png)
 
