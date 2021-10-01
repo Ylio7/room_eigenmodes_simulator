@@ -9,10 +9,19 @@ Esta aplicación permite evaluar el comportamiento modal de recintos modelados e
 
 
 ## Descarga e instalación
-Existen dos alternativas para utilizar la aplicación. La primera de ellas es mediante el archivo *Simulador_modos_propios.mph*, el cual se ejecuta utilizando el software COMSOL Multiphysics® (versión 5.6 o superior). Este archivo contiene el diseño y la implementación de los métodos necesarios para ejecutar la aplicación. Se puede descargar desde el siguiente repositorio en GitHub: https://github.com/Ylio7/simulador-de-modos-propios. Las próximas versiones y actualizaciones serán publicadas en el mismo repositorio.
+Existen dos alternativas para utilizar la aplicación:
 
-Por otra parte, si no se tiene instalado COMSOL Multiphysics®, se podrá utilizar la versión ejecutable para Windows que se descarga desde el siguiente enlace: https://bit.ly/3ifNOKw. Incluye el runtime environment de COMSOL Multiphysics® necesario para correr la aplicación. La instalación del runtime environment se efectúa la primera vez que se ejecute la aplicación. Se deberán aceptar los términos y condiciones y elegir la carpeta de instalación (se recomienda dejar la que viene por defecto).
+1. Mediante el archivo Simulador_modos_propios.mph, el cual se ejecuta utilizando el software COMSOL Multiphysics® (versión 5.6 o superior). Este archivo contiene el diseño y la implementación de los métodos necesarios para ejecutar la aplicación. Se puede descargar desde el siguiente repositorio en GitHub: https://github.com/Ylio7/simulador-de-modos-propios. Las próximas versiones y actualizaciones serán publicadas en el mismo repositorio.
 
+1. Si no se tiene instalado COMSOL Multiphysics®, se podrá utilizar la versión ejecutable para Windows que se descarga desde el siguiente enlace: https://bit.ly/3ifNOKw. Incluye el runtime environment de COMSOL Multiphysics® necesario para correr la aplicación. La instalación del runtime environment se efectúa la primera vez que se ejecute la aplicación. Se deberán aceptar los términos y condiciones y elegir la carpeta de instalación (se recomienda dejar la que viene por defecto).
+
+	Pasos a seguir:
+
+	I. Extraer el archivo Simulador_de_modos_propios.exe antes de ejecutarlo.
+
+	II. Si al iniciar el programa aparece un mensaje de advertencia de Windows Smart Screen, elegir "Más información" > "Ejecutar de todas formas".
+
+	III. Si es detectado por Windows Defender, agregar el programa a la lista de permitidos.
 
 
 ## Herramientas
