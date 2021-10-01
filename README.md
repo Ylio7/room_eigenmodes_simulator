@@ -9,17 +9,26 @@ Esta aplicación permite evaluar el comportamiento modal de recintos modelados e
 
 
 ## Descarga e instalación
-Existen dos alternativas para utilizar la aplicación. La primera de ellas es mediante el archivo *Simulador_modos_propios.mph*, el cual se ejecuta utilizando el software COMSOL Multiphysics® (versión 5.6 o superior). Este archivo contiene el diseño y la implementación de los métodos necesarios para ejecutar la aplicación. Se puede descargar desde el siguiente repositorio en GitHub: https://github.com/Ylio7/simulador-de-modos-propios. Las próximas versiones y actualizaciones serán publicadas en el mismo repositorio.
+Existen dos alternativas para utilizar la aplicación:
 
-Por otra parte, si no se tiene instalado COMSOL Multiphysics®, se podrá utilizar la versión ejecutable para Windows que se descarga desde el siguiente enlace: https://bit.ly/3ifNOKw. Incluye el runtime environment de COMSOL Multiphysics® necesario para correr la aplicación. La instalación del runtime environment se efectúa la primera vez que se ejecute la aplicación. Se deberán aceptar los términos y condiciones y elegir la carpeta de instalación (se recomienda dejar la que viene por defecto).
+1. Mediante el archivo Simulador_modos_propios.mph, el cual se ejecuta utilizando el software COMSOL Multiphysics® (versión 5.6 o superior). Este archivo contiene el diseño y la implementación de los métodos necesarios para ejecutar la aplicación. Se puede descargar desde el siguiente repositorio en GitHub: https://github.com/Ylio7/simulador-de-modos-propios. Las próximas versiones y actualizaciones serán publicadas en el mismo repositorio.
 
+1. Si no se tiene instalado COMSOL Multiphysics®, se podrá utilizar la versión ejecutable para Windows que se descarga desde el siguiente enlace: https://bit.ly/3ifNOKw. Incluye el runtime environment de COMSOL Multiphysics® necesario para correr la aplicación. La instalación del runtime environment se efectúa la primera vez que se ejecute la aplicación. Se deberán aceptar los términos y condiciones y elegir la carpeta de instalación (se recomienda dejar la que viene por defecto).
+
+	Pasos a seguir:
+
+	I. Extraer el archivo Simulador_de_modos_propios.exe antes de ejecutarlo.
+
+	II. Si al iniciar el programa aparece un mensaje de advertencia de Windows Smart Screen, elegir "Más información" > "Ejecutar de todas formas".
+
+	III. Si es detectado por Windows Defender, agregar el programa a la lista de permitidos.
 
 
 ## Herramientas
 La aplicación inicia con el modelo geométrico por defecto junto con la tabla de sus frecuencias propias.
 ![](https://raw.githubusercontent.com/Ylio7/simulador-de-modos-propios/master/doc/img/001.png)
 ### Importar modelo
-Permite importar modelos geométricos en formato .stl, .dwg, .dxf y otros de CAD 3D.
+Permite importar modelos geométricos en formato .stl, .dwg, .dxf y otros de CAD 3D. Se recomienda que los modelos realizados en SketchUp sean exportados a formato .stl.
 ### SketchUp Online
 Abre el sitio web https://app.sketchup.com/app que permite realizar modelos de salas de forma gratuita con las herramientas del software SketchUp, para ser luego importadas a la aplicación.
 ### Graficar geometría
@@ -95,7 +104,9 @@ Finalmente, procedemos a realizar el estudio de distribución de modos y el aná
 
 Según se aprecia, el estudio alcanza hasta la banda de tercio de octava de 100 Hz, debido al corte por la frecuencia de Schroeder. En este ejemplo, la distribución de modos cumple con el criterio de Bonello.
 ## SketchUp Online
-Permite diseñar y modelar salas de manera gratuita utilizando las herramientas del programa SketchUp. Al hacer clic se abrirá la pagina de inicio de sesión. Se podrá crear una cuenta de Trimble o conectarse con una cuenta de Google o Apple.
+Es recomendable realizar los modelos utilizando el programa de dibujo SketchUp, fundamentalmente por su sencillez y rapidez. El mismo permite exportar los modelos al formato .stl para ser luego importados a la aplicación.
+
+En caso de no contar con este programa, existe una versión online que permite diseñar y modelar salas de manera gratuita. Al hacer clic se abrirá la pagina de inicio de sesión. Se podrá crear una cuenta de Trimble o conectarse con una cuenta de Google o Apple.
 
 ![](https://raw.githubusercontent.com/Ylio7/simulador-de-modos-propios/master/doc/img/009.png)
 
