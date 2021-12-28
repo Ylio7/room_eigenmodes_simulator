@@ -1,130 +1,144 @@
-# Simulador de modos propios v1.0
-![](https://raw.githubusercontent.com/Ylio7/simulador-de-modos-propios/master/img/loading_screen.bmp)
+# ROOM EIGENMODES SIMULATOR v1.1
+![](https://raw.githubusercontent.com/Ylio7/simulador-de-modos-propios/master/img/loading_screen_1.1.bmp)
 
-
-
-Esta aplicación permite evaluar el comportamiento modal de recintos modelados en 3D. Fue desarrollada mediante el Application Builder del programa COMSOL Multiphysics&reg; v5.6
+Application developed using the Application Builder of COMSOL Multiphysics® v5.6 to calculate and evaluate the natural frequencies of rooms modeled in 3D.
 
 ------------
 
+## Download and Installation
+The executable version for Windows (only x64) can be downloaded using any of the following links:
+- https://github.com/Ylio7/simulador-de-modos-propios/tree/master/exe
+- https://bit.ly/3ifNOKw
 
-## Descarga e instalación
-Existen dos alternativas para utilizar la aplicación:
+Steps to follow:
 
-1. Mediante el archivo Simulador_modos_propios.mph, el cual se ejecuta utilizando el software COMSOL Multiphysics® (versión 5.6 o superior). Este archivo contiene el diseño y la implementación de los métodos necesarios para ejecutar la aplicación. Se puede descargar desde el siguiente repositorio en GitHub: https://github.com/Ylio7/simulador-de-modos-propios. Las próximas versiones y actualizaciones serán publicadas en el mismo repositorio.
+1. Execute the file Room_eigenmodes_simulator_v1.1.exe.
 
-1. Si no se tiene instalado COMSOL Multiphysics®, se podrá utilizar la versión ejecutable para Windows que se descarga desde el siguiente enlace: https://bit.ly/3ifNOKw. Incluye el runtime environment de COMSOL Multiphysics® necesario para correr la aplicación. La instalación del runtime environment se efectúa la primera vez que se ejecute la aplicación. Se deberán aceptar los términos y condiciones y elegir la carpeta de instalación (se recomienda dejar la que viene por defecto).
+1. If a Windows Smart Screen warning message appears when you start the program, choose More Info > Run Anyway.
 
-	Pasos a seguir:
+1. If it is detected by Windows Defender, add the program to the allowed list.
 
-	I. Extraer el archivo Simulador_de_modos_propios.exe antes de ejecutarlo.
+1. If this is the first time the application is being executed, the COMSOL Multiphysics® runtime environment necessary to run the application will be downloaded. Terms and conditions must be accepted and choose the installation folder (it is recommended to leave the default one).
 
-	II. Si al iniciar el programa aparece un mensaje de advertencia de Windows Smart Screen, elegir "Más información" > "Ejecutar de todas formas".
+## Tools
+The application starts with the geometric model by default (default.stl). A table containing a few of its natural frequencies is also showed.
 
-	III. Si es detectado por Windows Defender, agregar el programa a la lista de permitidos.
+![](https://github.com/Ylio7/simulador-de-modos-propios/blob/master/doc/img/001.png?raw=true)
 
+### Import model
+It allows importing geometric models in .stl, .dwg, .dxf and other 3D CAD formats. It is recommended that models made in SketchUp to be exported in .stl format.
 
-## Herramientas
-La aplicación inicia con el modelo geométrico por defecto junto con la tabla de sus frecuencias propias.
-![](https://raw.githubusercontent.com/Ylio7/simulador-de-modos-propios/master/doc/img/001.png)
-### Importar modelo
-Permite importar modelos geométricos en formato .stl, .dwg, .dxf y otros de CAD 3D. Se recomienda que los modelos realizados en SketchUp sean exportados a formato .stl.
 ### SketchUp Online
-Abre el sitio web https://app.sketchup.com/app que permite realizar modelos de salas de forma gratuita con las herramientas del software SketchUp, para ser luego importadas a la aplicación.
-### Graficar geometría
-Traza el modelo geométrico en el área de gráfico.
-### Malla
-Traza la malla de cálculo en el área de gráfico.
-### Resoluciones
-Permite aumentar la resolución de la malla y de los ángulos entre caras (este último exclusivamente para modelos .stl).
-### Contornos
-Permite seleccionar y ocultar contornos (caras). Útil para observar las zonas de presión e isocurvas dentro del recinto.
-### Calcular
-Efectúa el cálculo de las frecuencias propias en base a dos parámetros de entrada:
-- Cantidad mínima de frecuencias a calcular: el valor por defecto se calcula para cubrir el entorno de la frecuencia de Schroeder.
-- Calcular a partir de los: indica frecuencia mínima, aunque la misma podría ser aún menor según las dimensiones del recinto. Generalmente se recomienda dejar este valor en 20 Hz.
+Open the website https://app.sketchup.com/app to create room models using SketchUp software tools for free, to be later imported into the application.
 
-Una vez calculadas las frecuencias propias se muestran en la tabla a la derecha del gráfico.
-### Graficar modos
-Traza los mapas de presión e isocurvas y habilita los controles interactivos debajo del gráfico. Estos permiten seleccionar la frecuencia propia a mostrar, manejar con un control deslizable el comportamiento de las isocurvas y seleccionar la cantidad de niveles para subdividirlas.
-### Exportar tabla
-Exporta la tabla de frecuencias propias calculadas a un archivo .txt.
-### Generar reporte
-Confecciona un informe automático según los siguientes datos de entrada:
-- Título
-- Autor
-- Empresa
-- Fecha
-- Versión
-- Resumen
+### Plot geometry
+Draws the geometric model in the plot area.
 
-### Planilla de análisis
-Abre la planilla Modos_COMSOL.xlsm que permite observar la distribución de modos y realizar un análisis según el criterio de Bonello.
-### Frecuencia de Schroeder
-En zona inferior de la aplicación aparecen los siguientes datos:
-- Volumen del recinto: calculado automáticamente.
-- Tiempo de reverberación a frecuencias medias Tmid : debe ser ingresado por el usuario.
-- Frecuencia de Schroeder: con los datos del Volumen y el Tmid, la aplicación calcula la frecuencia de corte a partir de la cual se estima que el comportamiento ondulatorio del recinto deja de ser relevante. **Esta frecuencia debe tomarse a modo indicativo, ya que dependerá también de la morfología del recinto bajo análisis.**
+### Mesh
+Draws the calculation mesh in the plot area.
 
-## Ejemplo práctico
-### Importando modelo geométrico
-Procedemos a utilizar la herramienta *Importar modelo* > *Importar STL* y buscamos el archivo *conferencia.stl* dentro de la carpeta *models*. Al finalizar se genera la geometría:
+### Resolutions
+Allows increasing the resolution of the mesh and the angles between faces (the latter exclusively for .stl models).
 
-![](https://raw.githubusercontent.com/Ylio7/simulador-de-modos-propios/master/doc/img/002.png)
+### Contours
+Allows to select and hide contours (faces). Useful for observing pressure zones and isocurves within the enclosure.
 
-Al inspeccionar el modelo se verifica una baja calidad en la morfología de las superficies curvas. Para mejorar esto se debe utilizar la herramienta *Resoluciones*. Debido a que el archivo importado es .*stl*, es posible aumentar la resolución angular entre caras. Seleccionar la opción* Extra alta* y verificar que las curvas han sido mejoradas considerablemente.
+### Calculate
+Calculates the eigenfrequencies based on two input parameters:
 
-![](https://raw.githubusercontent.com/Ylio7/simulador-de-modos-propios/master/doc/img/003.png)
+- Minimum amount of frequencies to calculate: the default value is estimated to cover until the Schroeder frequency.
+- Calculate from: indicates the lower frequency, although it could be even lower depending on the dimensions of the enclosure. It is generally recommended to leave this value at 20 Hz.
 
-La resolución de la malla también puede aumentarse (lo que incrementará el tiempo de cálculo). Generalmente deberá utilizarse la opción *Normal* que viene por defecto.
+Once the natural frequencies have been calculated, they are shown in the table to the right of the plot.
 
-![](https://raw.githubusercontent.com/Ylio7/simulador-de-modos-propios/master/doc/img/004.png)
+### Plot eigenmodes
+Draw the pressure and isocurve maps using the color code shown on the right, which ranges from blue (minimum pressure areas), through white (cancellation areas) to red (maximum pressure areas). Enables the interactive controls below the chart, which allow the user to select the natural frequency to be displayed, play a pure tone of that frequency, control the behavior of the isocurves with a slider and select the number of levels to subdivide them.
 
-**Cabe destacar que el ajuste de estas resoluciones no es obligatorio, dependerá exclusivamente de la complejidad del modelo**. El cálculo puede efectuarse directamente luego de importar el modelo ya que la aplicación utilizará las resoluciones por defecto (*Normal*).
+### Export table
+Exports the table of calculated natural frequencies to a .txt file.
 
-Con el mouse es posible interactuar con la geometría. Con el botón izquierdo se rota la vista y con el derecho se desplaza el plano actual. Manteniendo apretado el botón central y moviendo el mouse hacia arriba y abajo se logra hacer zoom-in y zoom-out. Estas acciones también pueden llevarse a cabo con los controles superiores del panel gráfico.
-### Cálculo
-Una vez importado el modelo se deberá ingresar el valor del Tmid. Para este ejemplo utilizaremos el valor de 0.90 segundos, por lo que la frecuencia de Schroeder será de 96.6 Hz.
+### Generate report
+Produces an automatic report based on the following input data:
+- Title
+- Author
+- Company
+- Date
+- Version
+- Summary
 
-A continuación, hacemos clic en *Calcular* y vemos que la aplicación recomienda obtener, al menos, 45 frecuencias para alcanzar a cubrir la frecuencia de Schroeder . Sin modificar estos valores, procedemos a calcular.
 
-![](https://raw.githubusercontent.com/Ylio7/simulador-de-modos-propios/master/doc/img/005.png)
+### Analysis worksheet
+Opens an Excel worksheet that allows observing the distribution of modes and performing an analysis according to Bonello's criteria. For its correct use, in the first instance the natural frequencies must be copied to the clipboard using the corresponding tool in the results table.
+Then, in the worksheet, the user must click on the Import Data button to carrying out the calculations and generating the necessary graphics for the analysis. A name must also be entered for the room. The results can be found in the Evaluation sheet.
 
-Una vez finalizado, observamos que se han generado el gráfico de modos y la tabla de resultados con las frecuencias propias, la cual llega hasta los 105 Hz, por lo que alcanza a cubrir la frecuencia de Schroeder. Para inspeccionar dentro de la sala, hay que ocultar algunas caras utilizando la herramienta *Contornos*. Luego, volvemos a *Graficar modos* para continuar con la inspección.
+### Schroeder frequency
+The following information appears in the lower area of the application:
+- Volume of the enclosure: automatically calculated.
+- Reverberation time at mid frequencies Tmid : must be entered by the user.
+- Schroeder frequency: with the Volume and Tmid data, the application calculates the cutoff frequency from which it is estimated that the wave behavior of the room is no longer relevant. **This frequency should be taken as an approximation, since it will also depend on the morphology of the room under analysis.**
 
-![](https://raw.githubusercontent.com/Ylio7/simulador-de-modos-propios/master/doc/img/006.png)
+### Pure tone player
+Reproduces a pure tone at the selected natural frequency. 
 
-Ajustamos la vista, seleccionamos la frecuencia de 49.3 Hz, una división de niveles de 20 e interactuamos con el control deslizable para observar el comportamiento de las isocurvas.
+## Practical example
+### Importing geometric model
+We proceed to use the Import model > STL tool and search for the conference.stl file inside the models/stl folder.
 
-![](https://raw.githubusercontent.com/Ylio7/simulador-de-modos-propios/master/doc/img/007.png)
+![](https://github.com/Ylio7/simulador-de-modos-propios/blob/master/doc/img/002.png?raw=true)
 
-Finalmente, procedemos a realizar el estudio de distribución de modos y el análisis según el criterio de Bonello. Para esto, copiamos el contenido de la tabla de resultados al portapapeles con la herramienta indicada en la barra superior de la tabla. Luego, clic en *Planilla de análisis* . Una vez abierta, clic en el botón *Importar Datos* para importar las frecuencias. A continuación, nombramos la sala como *Conferencia* y observamos en la hoja *Evaluación* los siguientes resultados:
+When inspecting the model, a low quality is verified in the morphology of the curved surfaces. To improve this, the Resolutions tool should be used. Since the imported file is .stl, it is possible to increase the angular resolution between faces. Select the Extra high option and verify that the curves have been considerably improved.
 
-![](https://raw.githubusercontent.com/Ylio7/simulador-de-modos-propios/master/doc/img/008.png)
+![](https://github.com/Ylio7/simulador-de-modos-propios/blob/master/doc/img/003.png?raw=true)
 
-Según se aprecia, el estudio alcanza hasta la banda de tercio de octava de 100 Hz, debido al corte por la frecuencia de Schroeder. En este ejemplo, la distribución de modos cumple con el criterio de Bonello.
+The resolution of the mesh can also be increased (which will increase the computation time). Generally, the default Normal should be used.
+
+![](https://github.com/Ylio7/simulador-de-modos-propios/blob/master/doc/img/004.png?raw=true)
+
+It should be noted that the adjustment of these resolutions is not mandatory, it will depend exclusively on the complexity of the model. The calculation can be carried out directly after importing the model since the application will use the default resolutions (Normal).
+
+With the mouse it is possible to interact with the geometry. The left button rotates the view and the right button moves the current plane. Pressing and holding the scroll wheel and moving the mouse up and down, you can zoom-in and zoom-out. Holding Alt + left mouse button rotates the model in the current plane. These actions can also be carried out with the upper controls of the graphic panel.
+
+### Calculation
+Once the model is imported, the value of the Tmid must be entered. For this example, we will use 0.90 seconds, so the Schroeder frequency will be 96.6 Hz. Next, click on Calculate and you see that the application recommends obtaining at least 45 frequencies to reach the Schroeder frequency . Without modifying these values, proceed to calculate.
+
+![](https://github.com/Ylio7/simulador-de-modos-propios/blob/master/doc/img/005.png?raw=true)
+
+Once completed, observe that the eigenmode plot and the results table with the natural frequencies have been generated, which reach up to 105 Hz, thus covering the Schroeder frequency. To inspect within the room, some faces must be hidden using the Contours tool. Then, go back to Plot eigenmodes to continue the inspection.
+
+![](https://github.com/Ylio7/simulador-de-modos-propios/blob/master/doc/img/006.png?raw=true)
+
+Adjust the view, select the frequency of 49.3 Hz, a level division of 20 and interact with the slider to observe the behavior of the isocurves.
+
+![](https://github.com/Ylio7/simulador-de-modos-propios/blob/master/doc/img/007.png?raw=true)
+
+Finally, we proceed to carry out the eigenmode distribution study and the analysis according to the Bonello criterion. For this, copy the content of the results table to the clipboard with the corresponding tool. Then, click on Analysis Worksheet. Once open, click the Import Data button to import the frequencies. Next, name the room as "Conference" and we observe in the Evaluation sheet the following results:
+
+![](https://github.com/Ylio7/simulador-de-modos-propios/blob/master/doc/img/008.png?raw=true)
+
+As can be seen, the study reaches up to the third octave band of 100 Hz, due to the cutoff by the Schroeder frequency. In this example, the mode distribution meets the Bonello criterion.
+
 ## SketchUp Online
-Es recomendable realizar los modelos utilizando el programa de dibujo SketchUp, fundamentalmente por su sencillez y rapidez. El mismo permite exportar los modelos al formato .stl para ser luego importados a la aplicación.
-
-En caso de no contar con este programa, existe una versión online que permite diseñar y modelar salas de manera gratuita. Al hacer clic se abrirá la pagina de inicio de sesión. Se podrá crear una cuenta de Trimble o conectarse con una cuenta de Google o Apple.
+Due to its simplicity and speed of drawing, it is recommended to make the models using SketchUp. It allows the models to be exported in .stl format to be later imported into the application. If you do not have this program, there is a free online version that allows you to design and model rooms.
+Clicking on "SketchUp Online" icon will open the login page. You can create a Trimble account or connect with a Google or Apple account.
 
 ![](https://raw.githubusercontent.com/Ylio7/simulador-de-modos-propios/master/doc/img/009.png)
 
-Una vez creado nuestro usuario, aparecerá la pantalla de inicio en donde se mostrarán los modelos realizados. Para comenzar uno nuevo, clic en Crear nuevo. También permite abrir un archivo .skp almacenado en el ordenador.
+After the user is created, the home screen will appear. To start a new model, click Create New. It also allows you to open a .skp file stored on your computer.
 
-![](https://raw.githubusercontent.com/Ylio7/simulador-de-modos-propios/master/doc/img/010.png)
+![](https://github.com/Ylio7/simulador-de-modos-propios/blob/master/doc/img/010.png?raw=true)
 
-Una vez modelada la sala, es buena práctica seleccionar todas las caras, hacer clic derecho y elegir la opción *Crear grupo*. De este modo, haciendo nuevamente clic derecho y seleccionando la opción* Información de la entidad*, deberá informarnos del volumen de la sala. En caso contrario, habrá que revisar el modelo ya que el mismo no se ha cerrado, lo que producirá errores al intentar importarlo en la aplicación.
+Once the room is modeled, it is good practice to select all the faces, right-click, and choose the Make Group option. In this way, by right-clicking again and selecting the Entity Information option, the volume of the room must be seen. Otherwise, the model will have to be reviewed since it has not been closed, which will cause errors when trying to import it into the application.
 
-![](https://raw.githubusercontent.com/Ylio7/simulador-de-modos-propios/master/doc/img/011.png)
-![](https://raw.githubusercontent.com/Ylio7/simulador-de-modos-propios/master/doc/img/012.png)
+![](https://github.com/Ylio7/simulador-de-modos-propios/blob/master/doc/img/011.png?raw=true)
 
-Finalmente, para guardar el modelo en el ordenador se debe hacer clic en el menú desplegable y elegir la opción *Descargar* > *STL*. Este archivo es el que se importará a la aplicación.
+![](https://github.com/Ylio7/simulador-de-modos-propios/blob/master/doc/img/012.png?raw=true)
 
-![](https://raw.githubusercontent.com/Ylio7/simulador-de-modos-propios/master/doc/img/013.png)
+Finally, to save the model on the computer, click on the drop-down menu and choose the option Download > STL. This file is the one that will be imported into the application.
 
-## Contacto
-Ing. Agustín Ylio Arias
+![](https://github.com/Ylio7/simulador-de-modos-propios/blob/master/doc/img/013.png?raw=true)
+
+## Contact
+Eng. Agustín Ylio Arias
 
 [agustin.arias@outlook.com](mailto:agustin.arias@outlook.com)
 
