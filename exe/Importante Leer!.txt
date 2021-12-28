@@ -1,4 +1,0 @@
-1) Extraer el archivo Simulador_de_modos_propios.exe en caso de haber sido descargado comprimido
-2) Si al iniciar el programa aparece un mensaje de advertencia de Windows Smart Screen, elegir "Más información" > "Ejecutar de todas formas"
-3) Si es detectado por Windows Defender, agregar el programa a la lista de permitidos
-4) Si es la primera vez que se ejecuta la aplicación en el ordenador, se descargará en primera instancia el runtime environment de COMSOL Multiphysics® necesario para correr la aplicación. Se deberán aceptar los términos y condiciones y elegir la carpeta de instalación (se recomienda dejar la que viene por defecto).
